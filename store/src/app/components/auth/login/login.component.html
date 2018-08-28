@@ -1,0 +1,58 @@
+<section class="main-container col1-layout">
+    <div class="main container">
+        <div class="account-login">
+            <div class="page-title">
+                <h2>Login </h2>
+            </div>
+            <fieldset class="col2-set">
+                <div class="col-1 registered-users">
+                    <strong>Don't have an account ? <a [routerLink]="['/register']">Register </a></strong>
+                    <div class="content">
+                        
+                        <form  (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+                            <ul class="form-list">
+                                <li>
+                                    <label for="email">Email Address <span class="required">*</span></label>
+                                    <br>
+                                    <input 
+                                        [(ngModel)]="form.email"
+                                        #email="ngModel"
+                                        required
+                                        name="email"
+                                        type="text" 
+                                        class="input-text required-entry" 
+                                        id="email"
+                                    >
+                                </li>
+                                <li>
+                                    <label for="pass">Password <span class="required">*</span></label>
+                                    <br>
+                                    <input 
+                                        [(ngModel)]="form.password" 
+                                        #password="ngModel"
+                                        required
+                                        name="password"
+                                        type="password" 
+                                        id="password" 
+                                        class="input-text required-entry validate-password" 
+                                    >
+                                </li>
+                            </ul>
+                            <p class="required">* Required Fields</p>
+                            <div class="buttons-set">
+                                <button id="login-btn" [disabled]="!loginForm.valid" name="login-btn" type="submit" class="button login" [class.disabled]="!loginForm.valid"><span>Login</span></button>
+                                &nbsp;
+                                <a class="forgot-word" href="#"> Forgot Your Password?</a> 
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+</section>

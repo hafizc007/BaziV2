@@ -1,0 +1,43 @@
+<section class="main-container col1-layout">
+  <div class="main container">
+      <div class="account-login">
+          <div class="page-title">
+              <h2>Login </h2>
+          </div>
+          <fieldset class="col2-set">
+              <div class="col-1 registered-users">
+                  <strong>Already have an account ? <a [routerLink]="['/login']">Login </a></strong>
+                  <div class="content">
+                      <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+                          <ul class="form-list">
+                            <li>
+                              <label for="customers_name">Name <span class="required">*</span></label>
+                              <br>
+                              <input 
+                                [(ngModel)]="customer.customers_name"
+                                #customers_name="ngModel"
+                                type="text"
+                                class="input-text required-entry" 
+                              >
+                              <input 
+                                
+                                type="text"
+                              >
+                          </li>
+                          </ul>
+                          <p class="required">* Required Fields</p>
+                          <div class="buttons-set">
+                              <button type="submit" class="button login" ><span>Register</span></button>
+                            </div>
+                      </form>
+                  </div>
+              </div>
+          </fieldset>
+      </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
+</section>
